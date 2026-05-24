@@ -602,11 +602,39 @@ section {
   transition: color var(--transition);
 }
 
+.project-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
 .project-tech {
   font-size: 0.75rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-md);
+  z-index: 5;
+}
+
+.project-link {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color var(--transition);
+}
+
+.project-link:hover {
+  color: var(--accent);
 }
 
 .project-link-arrow {
