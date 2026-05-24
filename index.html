@@ -1,372 +1,452 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anant Shrey - Portfolio of a student and developer exploring the interface of physics and programming."
+    />
+    <title>Anant Shrey | Portfolio</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Anant Shrey - Portfolio of a student and developer exploring the interface of physics and programming." />
-  <title>Anant Shrey | Portfolio</title>
+    <!-- Google Fonts: Cormorant Garamond (humanist serif) & Plus Jakarta Sans (warm sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts: Cormorant Garamond (humanist serif) & Plus Jakarta Sans (warm sans) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Icons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header" role="banner">
+      <div class="container header-container">
+        <a href="#hero" class="header-logo" aria-label="Anant Shrey Home">
+          Anant Shrey
+        </a>
 
-<body>
+        <nav
+          class="nav-links"
+          id="nav-links"
+          role="navigation"
+          aria-label="Main Navigation"
+        >
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#credentials" class="nav-link">Log</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
 
-  <!-- ================= HEADER ================= -->
-  <header class="header" role="banner">
-    <div class="container header-container">
-      <a href="#hero" class="header-logo" aria-label="Anant Shrey Home">
-        Anant Shrey
-      </a>
-
-      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main Navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#credentials" class="nav-link">Log</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="theme-btn" id="theme-toggle" aria-label="Toggle Contrast Theme">
-          <i class="bx bx-moon" id="theme-icon"></i>
-        </button>
-        <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-          <i class="bx bx-menu" id="menu-icon"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ================= HERO ================= -->
-  <section id="hero" class="hero-section" role="region" aria-label="Introduction">
-    <div class="container hero-container-grid">
-      <div class="hero-text-col fade-up-trigger">
-        <span class="section-label">Introduction</span>
-        <h1 class="hero-name">Anant Shrey</h1>
-        <p class="hero-one-liner">
-          A class 11 student and developer learning the <span>laws of physics</span> and computing to build thoughtful, elegant systems.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#projects" class="btn-editorial primary">Explore Projects</a>
-          <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-editorial secondary">
-            <i class="bx bx-file"></i> View Resume
-          </a>
-        </div>
-
-        <!-- Soft Scroll Indicator inside Left Column -->
-        <div class="scroll-indicator stagger-2">
-          <span class="scroll-text">Scroll to explore</span>
-          <div class="scroll-line"></div>
+        <div class="nav-actions">
+          <button
+            class="theme-btn"
+            id="theme-toggle"
+            aria-label="Toggle Contrast Theme"
+          >
+            <i class="bx bx-moon" id="theme-icon"></i>
+          </button>
+          <button
+            class="menu-toggle-btn"
+            id="menu-toggle"
+            aria-label="Toggle Menu"
+            aria-expanded="false"
+          >
+            <i class="bx bx-menu" id="menu-icon"></i>
+          </button>
         </div>
       </div>
+    </header>
 
-      <div class="hero-photo-col">
-        <div class="hero-photo-wrapper">
-          <img src="./assets/profile.png" alt="Anant Shrey" class="hero-photo" loading="eager" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section id="about" role="region" aria-label="About Me">
-    <div class="container">
-      <span class="section-label">Profile</span>
-      <h2 class="section-title">A quiet focus on learning.</h2>
-      
-      <div class="about-layout">
-        <div class="about-bio-text fade-up-trigger">
-          <p>
-            Hi, I’m Anant. I am currently in class 11 at DPSG Vasundhara, studying Physics, Chemistry, Mathematics, and Computer Science. 
-            Instead of standard test preparation, I choose to invest my curiosity in learning the fundamental rules of computing and physics—whether that’s completing Harvard’s <span>CS50 course</span>, learning German, or writing Python engines to model ballistics.
+    <!-- ================= HERO ================= -->
+    <section
+      id="hero"
+      class="hero-section"
+      role="region"
+      aria-label="Introduction"
+    >
+      <div class="container hero-container-grid">
+        <div class="hero-text-col fade-up-trigger">
+          <span class="section-label">Introduction</span>
+          <h1 class="hero-name">Anant Shrey</h1>
+          <p class="hero-one-liner">
+            A high school senior and student developer learning the
+            <span>laws of physics</span> and computing to build thoughtful,
+            elegant projects & systems.
           </p>
-          <p>
-            Recently, I scored in the 95th percentile in the TestAS core module. This milestone gave me the confidence to pursue my ultimate ambition: relocating to Germany in 2027 to study Physics at the undergraduate level and eventually work in aerospace or scientific research.
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-editorial primary"
+              >Explore Projects</a
+            >
+            <a
+              href="./assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-editorial secondary"
+            >
+              <i class="bx bx-file"></i> View Resume
+            </a>
+          </div>
+
+          <!-- Soft Scroll Indicator inside Left Column -->
+          <div class="scroll-indicator stagger-2">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-line"></div>
+          </div>
+        </div>
+
+        <div class="hero-photo-col">
+          <div class="hero-photo-wrapper">
+            <img
+              src="./assets/profile.png"
+              alt="Anant Shrey"
+              class="hero-photo"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" role="region" aria-label="About Me">
+      <div class="container">
+        <span class="section-label">Profile</span>
+        <h2 class="section-title">A quiet focus on learning.</h2>
+
+        <div class="about-layout">
+          <div class="about-bio-text fade-up-trigger">
+            <p>
+              Hi, I’m Anant. I am currently in grade 12 at DPSG Vasundhara,
+              studying Physics, Chemistry, Mathematics, and Computer Science.
+              Instead of standard test preparation for the engineering exams, I
+              choose to invest my curiosity in learning the fundamental rules of
+              computing and physics—whether that’s completing Harvard’s
+              <span>CS50 course</span>, learning German, or writing Python code
+              to model projectile trajectories.
+            </p>
+            <p>
+              Recently, I scored in the 95th percentile in the
+              <span>TestAS Core</span> module and 96th percentile in the
+              <span>TestAS MCN</span> module. This was an important milestone
+              that gave me the confidence to pursue my ultimate ambition:
+              relocating to Germany in 2027 to study Physics at the
+              undergraduate level and eventually work in aerospace or scientific
+              research.
+            </p>
+          </div>
+
+          <div class="about-stats fade-up-trigger stagger-1">
+            <div class="stat-item">
+              <div class="stat-value">95%</div>
+              <div class="stat-label">TestAS Core Score</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">96%</div>
+              <div class="stat-label">TestAS MCN Score</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">95.2%</div>
+              <div class="stat-label">CBSE 10th Boards</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">90% (Predicted)</div>
+              <div class="stat-label">CBSE 12th Boards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" role="region" aria-label="Projects">
+      <div class="container">
+        <span class="section-label">Curated Work</span>
+        <h2 class="section-title">Selected Experiments</h2>
+
+        <div class="project-list">
+          <div class="project-item fade-up-trigger">
+            <div class="project-row-main">
+              <div class="project-title-group">
+                <h3 class="project-title">
+                  AeroLaunch - Projectile Motion Optimizer
+                </h3>
+                <p class="project-desc">
+                  A custom Python simulator mapping projectile trajectory arcs.
+                  Extends beyond simplified classroom formulas by accounting for
+                  air resistance and drag coefficients.
+                </p>
+              </div>
+              <div class="project-link-arrow">
+                <i class="bx bx-right-arrow-alt"></i>
+              </div>
+            </div>
+            <div class="project-tech">Python · Matplotlib · Kinematics</div>
+            <div class="project-underline"></div>
+          </div>
+
+          <div class="project-item fade-up-trigger stagger-1">
+            <div class="project-row-main">
+              <div class="project-title-group">
+                <h3 class="project-title">
+                  LifeOS - Life and Productivity Dashboard
+                </h3>
+                <p class="project-desc">
+                  An AI generated web-app built with Typescript, Next.js, and
+                  Tailwind CSS. Allows user to see and track their daily
+                  activities, habits and tasks along with many other features in
+                  a seamless single dashboard interface. Integrates APIs for
+                  books and movies/tv sections.
+                </p>
+              </div>
+              <div class="project-link-arrow">
+                <i class="bx bx-right-arrow-alt"></i>
+              </div>
+            </div>
+            <div class="project-tech">Typescript · Next.js · Tailwind CSS</div>
+            <div class="project-underline"></div>
+          </div>
+
+          <div class="project-item fade-up-trigger stagger-2">
+            <div class="project-row-main">
+              <div class="project-title-group">
+                <h3 class="project-title">German MINT Dictionary</h3>
+                <p class="project-desc">
+                  An academic vocabulary logger built to prepare for
+                  German-language undergraduate Physics studies. Allows tracking
+                  and testing terms like "Beschleunigung".
+                </p>
+              </div>
+              <div class="project-link-arrow">
+                <i class="bx bx-right-arrow-alt"></i>
+              </div>
+            </div>
+            <div class="project-tech">Python · Flask · SQLite</div>
+            <div class="project-underline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CREDENTIALS ================= -->
+    <section id="credentials" role="region" aria-label="Credentials Log">
+      <div class="container-reading">
+        <span class="section-label">Timeline</span>
+        <h2 class="section-title">Credentials Log</h2>
+
+        <div class="credentials-layout">
+          <div class="credential-section fade-up-trigger">
+            <h3 class="credential-cat-title">Standardized Tests</h3>
+            <div class="credential-timeline">
+              <div class="credential-row">
+                <span class="credential-date">2025</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">
+                    TestAS Examination <span>// 95% | 96%</span>
+                  </h4>
+                  <p class="credential-item-desc">
+                    Scored in the 95th Percentile for the Core Module and the
+                    96th Percentile for the Mathematics, CS &amp; Natural
+                    Sciences (MCN) Module.
+                  </p>
+                </div>
+              </div>
+
+              <div class="credential-row">
+                <span class="credential-date">2025</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">
+                    CBSE Class 10 Boards <span>// 95.2%</span>
+                  </h4>
+                  <p class="credential-item-desc">
+                    National level board examinations. Awarded the School
+                    Scholar badge for academic excellence for 4 years at DPSG
+                    Vasundhara for maintaining 90%+ aggregate percentage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="credential-section fade-up-trigger">
+            <h3 class="credential-cat-title">Extracurricular Log</h3>
+            <div class="credential-timeline">
+              <div class="credential-row">
+                <span class="credential-date">2025</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">
+                    IT Head <span>// DPSGVMUN 2nd Edition</span>
+                  </h4>
+                  <p class="credential-item-desc">
+                    Managed smooth operation of the Audio Visual presentations,
+                    along with assissting in design and video editing operations
+                  </p>
+                </div>
+              </div>
+
+              <div class="credential-row">
+                <span class="credential-date">2023</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">
+                    Varsity Cricket <span>// DPSG</span>
+                  </h4>
+                  <p class="credential-item-desc">
+                    Played on the school cricket squad, securing 3rd place in
+                    the DPSG Chairman's Cup championship.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="credential-section fade-up-trigger">
+            <h3 class="credential-cat-title">Courses &amp; Training</h3>
+            <div class="credential-timeline">
+              <div class="credential-row">
+                <span class="credential-date">Ongoing</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">Harvard CS50x</h4>
+                  <p class="credential-item-desc">
+                    Comprehensive training in computer science foundation
+                    principles: C syntax, algorithms, memory pointers, SQLite
+                    structures, and network fundamentals.
+                  </p>
+                </div>
+              </div>
+
+              <div class="credential-row">
+                <span class="credential-date">2023</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">
+                    Scientific Research Bootcamp
+                  </h4>
+                  <p class="credential-item-desc">
+                    An academic orientation on formal methods, scientific
+                    writing, and experimental hypotheses sponsored by Shoolini
+                    University.
+                  </p>
+                </div>
+              </div>
+
+              <div class="credential-row">
+                <span class="credential-date">2025</span>
+                <div class="credential-body">
+                  <h4 class="credential-item-title">
+                    AI Winter Camp for Students
+                  </h4>
+                  <p class="credential-item-desc">
+                    Specialized seminar organized by the Times of India group
+                    focusing on increasing productivity and efficiency by
+                    integrating AI and automated workflows .
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" role="region" aria-label="Skills & Stack">
+      <div class="container">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-layout">
+          <div class="skills-category fade-up-trigger">
+            <h3 class="skills-cat-title">Programming</h3>
+            <ul class="skills-list">
+              <li class="skills-item">Python</li>
+              <li class="skills-item">C / C++</li>
+              <li class="skills-item">SQL</li>
+              <li class="skills-item">HTML5 / CSS3</li>
+            </ul>
+          </div>
+
+          <div class="skills-category fade-up-trigger stagger-1">
+            <h3 class="skills-cat-title">Academics</h3>
+            <ul class="skills-list">
+              <li class="skills-item">Physics</li>
+              <li class="skills-item">Chemistry</li>
+              <li class="skills-item">Mathematics</li>
+              <li class="skills-item">German (B1)</li>
+            </ul>
+          </div>
+
+          <div class="skills-category fade-up-trigger stagger-2">
+            <h3 class="skills-cat-title">Tools &amp; Workflows</h3>
+            <ul class="skills-list">
+              <li class="skills-item">VS Code</li>
+              <li class="skills-item">Scientific Research Methods</li>
+              <li class="skills-item">AI Workflows</li>
+              <li class="skills-item">AI Assissted Development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section
+      id="contact"
+      class="contact-section"
+      role="region"
+      aria-label="Contact"
+    >
+      <div class="container">
+        <div class="contact-content fade-up-trigger">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="contact-cta">I’d love to <span>hear from you</span>.</h2>
+          <p class="about-bio-text" style="margin-bottom: var(--space-xl)">
+            Whether it’s about physics simulations, programming, or
+            undergraduate research in Germany, feel free to drop me an email.
           </p>
-        </div>
+          <a href="mailto:anantshrey2009@gmail.com" class="contact-email-link"
+            >anantshrey2009@gmail.com</a
+          >
 
-        <div class="about-stats fade-up-trigger stagger-1">
-          <div class="stat-item">
-            <div class="stat-value">95%</div>
-            <div class="stat-label">TestAS Core Score</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">96%</div>
-            <div class="stat-label">TestAS MINT Score</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">95.2%</div>
-            <div class="stat-label">CBSE 10th Boards</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">2027</div>
-            <div class="stat-label">Germany Goal</div>
+          <div class="social-links">
+            <a
+              href="https://github.com/AnantShrey"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <i class="bx bxl-github"></i> GitHub
+            </a>
+            <a
+              href="./assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <i class="bx bx-file"></i> Resume PDF
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" role="region" aria-label="Projects">
-    <div class="container">
-      <span class="section-label">Curated Work</span>
-      <h2 class="section-title">Selected Experiments</h2>
-
-      <div class="project-list">
-        
-        <div class="project-item fade-up-trigger">
-          <div class="project-row-main">
-            <div class="project-title-group">
-              <h3 class="project-title">Projectile Motion Optimizer</h3>
-              <p class="project-desc">
-                A custom Python simulator mapping ballistic trajectory arcs. Extends beyond simplified classroom formulas by accounting for air resistance and drag coefficients.
-              </p>
-            </div>
-            <div class="project-link-arrow">
-              <i class="bx bx-right-arrow-alt"></i>
-            </div>
-          </div>
-          <div class="project-tech">
-            Python · Matplotlib · Kinematics
-          </div>
-          <div class="project-underline"></div>
-        </div>
-
-        <div class="project-item fade-up-trigger stagger-1">
-          <div class="project-row-main">
-            <div class="project-title-group">
-              <h3 class="project-title">Arduino RC Car</h3>
-              <p class="project-desc">
-                A physically compiled robotic car. Programmed sensory logic thresholds in C++ to negotiate terrain obstacles, driving motors directly on the microcontroller board.
-              </p>
-            </div>
-            <div class="project-link-arrow">
-              <i class="bx bx-right-arrow-alt"></i>
-            </div>
-          </div>
-          <div class="project-tech">
-            C++ · Arduino Hardware · Electronics
-          </div>
-          <div class="project-underline"></div>
-        </div>
-
-        <div class="project-item fade-up-trigger stagger-2">
-          <div class="project-row-main">
-            <div class="project-title-group">
-              <h3 class="project-title">German MINT Dictionary</h3>
-              <p class="project-desc">
-                An academic vocabulary logger built to prepare for German-language undergraduate Physics studies. Allows tracking and testing terms like "Beschleunigung".
-              </p>
-            </div>
-            <div class="project-link-arrow">
-              <i class="bx bx-right-arrow-alt"></i>
-            </div>
-          </div>
-          <div class="project-tech">
-            Python · Flask · SQLite
-          </div>
-          <div class="project-underline"></div>
-        </div>
-
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-container">
+        <p>&copy; 2026 Anant Shrey. All rights reserved.</p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ================= CREDENTIALS ================= -->
-  <section id="credentials" role="region" aria-label="Credentials Log">
-    <div class="container-reading">
-      <span class="section-label">Timeline</span>
-      <h2 class="section-title">Credentials Log</h2>
-
-      <div class="credentials-layout">
-        
-        <div class="credential-section fade-up-trigger">
-          <h3 class="credential-cat-title">Standardized Tests</h3>
-          <div class="credential-timeline">
-            
-            <div class="credential-row">
-              <span class="credential-date">2026</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">TestAS Examination <span>// MINT Track</span></h4>
-                <p class="credential-item-desc">
-                  Scored in the 95th Percentile for the Core Module and the 96th Percentile for the Mathematics, CS &amp; Natural Sciences (MINT) Module.
-                </p>
-                <span class="credential-badge">MINT Certified</span>
-              </div>
-            </div>
-
-            <div class="credential-row">
-              <span class="credential-date">2025</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">CBSE Class 10 Boards <span>// 95.2%</span></h4>
-                <p class="credential-item-desc">
-                  National board examinations. Awarded the School Scholar badge for academic excellence for 4 consecutive years at DPSG.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="credential-section fade-up-trigger">
-          <h3 class="credential-cat-title">Extracurricular Log</h3>
-          <div class="credential-timeline">
-            
-            <div class="credential-row">
-              <span class="credential-date">2026</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">IT Operations Head <span>// DPSGVMUN</span></h4>
-                <p class="credential-item-desc">
-                  Managed server infrastructure, local networking setup, and tech logs for our school's Model United Nations conference.
-                </p>
-              </div>
-            </div>
-
-            <div class="credential-row">
-              <span class="credential-date">2023</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">Varsity Cricket <span>// DPSG</span></h4>
-                <p class="credential-item-desc">
-                  Played on the school cricket squad, securing 3rd place in the regional Chairman's Cup championship.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="credential-section fade-up-trigger">
-          <h3 class="credential-cat-title">Courses &amp; Training</h3>
-          <div class="credential-timeline">
-            
-            <div class="credential-row">
-              <span class="credential-date">Ongoing</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">Harvard CS50x</h4>
-                <p class="credential-item-desc">
-                  Comprehensive training in computer science foundation principles: C syntax, algorithms, memory pointers, SQLite structures, and network fundamentals.
-                </p>
-              </div>
-            </div>
-
-            <div class="credential-row">
-              <span class="credential-date">2025</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">Scientific Research Bootcamp</h4>
-                <p class="credential-item-desc">
-                  An academic orientation on formal methods, scientific writing, and experimental hypotheses sponsored by Shoolini University.
-                </p>
-              </div>
-            </div>
-
-            <div class="credential-row">
-              <span class="credential-date">2025</span>
-              <div class="credential-body">
-                <h4 class="credential-item-title">AI Productivity Training</h4>
-                <p class="credential-item-desc">
-                  Specialized seminar organized by the Times of India group focusing on neural models for workflow optimization and automated research indexing.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SKILLS ================= -->
-  <section id="skills" role="region" aria-label="Skills & Stack">
-    <div class="container">
-      <span class="section-label">Capabilities</span>
-      <h2 class="section-title">Technical Skills</h2>
-
-      <div class="skills-layout">
-        
-        <div class="skills-category fade-up-trigger">
-          <h3 class="skills-cat-title">Programming</h3>
-          <ul class="skills-list">
-            <li class="skills-item">Python</li>
-            <li class="skills-item">C / C++</li>
-            <li class="skills-item">SQL</li>
-            <li class="skills-item">HTML5 / CSS3</li>
-            <li class="skills-item">Git Version Control</li>
-          </ul>
-        </div>
-
-        <div class="skills-category fade-up-trigger stagger-1">
-          <h3 class="skills-cat-title">Academics</h3>
-          <ul class="skills-list">
-            <li class="skills-item">Classical Physics</li>
-            <li class="skills-item">Kinematics Simulation</li>
-            <li class="skills-item">Mathematics</li>
-            <li class="skills-item">German A2 (Scientific Terminology)</li>
-          </ul>
-        </div>
-
-        <div class="skills-category fade-up-trigger stagger-2">
-          <h3 class="skills-cat-title">Tools &amp; Workflows</h3>
-          <ul class="skills-list">
-            <li class="skills-item">Arduino Hardware</li>
-            <li class="skills-item">Linux Terminal</li>
-            <li class="skills-item">VS Code</li>
-            <li class="skills-item">Network Management</li>
-            <li class="skills-item">Scientific Research Methods</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact-section" role="region" aria-label="Contact">
-    <div class="container">
-      <div class="contact-content fade-up-trigger">
-        <span class="section-label">Get in Touch</span>
-        <h2 class="contact-cta">I’d love to <span>hear from you</span>.</h2>
-        <p class="about-bio-text" style="margin-bottom: var(--space-xl);">
-          Whether it’s about physics simulations, embedded programming, or undergraduate research in Germany, feel free to drop me an email.
-        </p>
-        <a href="mailto:anantshrey2009@gmail.com" class="contact-email-link">anantshrey2009@gmail.com</a>
-
-        <div class="social-links">
-          <a href="https://github.com/AnantShrey" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="bx bxl-github"></i> GitHub
-          </a>
-          <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="bx bx-file"></i> Resume PDF
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-container">
-      <p>&copy; 2026 Anant Shrey. All rights reserved.</p>
-      <p class="footer-credits">
-        Designed &amp; engineered in partnership with <span>Antigravity</span>.
-      </p>
-    </div>
-  </footer>
-
-  <!-- JS Engine -->
-  <script src="script.js"></script>
-</body>
-
+    <!-- JS Engine -->
+    <script src="script.js"></script>
+  </body>
 </html>
