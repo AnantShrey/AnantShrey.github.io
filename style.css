@@ -197,6 +197,49 @@ code, pre {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 28px;
+  width: auto;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: inline-block;
+}
+
+.logo-text {
+  font-size: inherit;       /* match whatever the navbar brand font-size already is */
+  font-weight: inherit;     /* match existing weight */
+  color: inherit;           /* inherits from the navbar so dark/light mode works automatically */
+  white-space: nowrap;
+}
+
+[data-theme="light"] .logo-img {
+  content: url('assets/logo-dark.png');
+}
+
+/* Visually hidden but accessible for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .nav-links {
