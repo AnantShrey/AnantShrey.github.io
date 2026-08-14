@@ -2,7 +2,738 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem('as-portfolio-theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved ? saved : (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Anant Shrey — Student developer exploring the interface of physics, computing, and thoughtful digital systems." />
+  <title>Anant Shrey | Portfolio</title>
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Anant Shrey | Portfolio" />
+  <meta property="og:description"
+    content="Anant Shrey — Student developer exploring the interface of physics, computing, and thoughtful digital systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anantshrey.github.io" />
+  <meta property="og:image" content="assets/profile.png" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Anant Shrey | Portfolio" />
+  <meta name="twitter:description"
+    content="Anant Shrey — Student developer exploring the interface of physics, computing, and thoughtful digital systems." />
+  <meta name="twitter:image" content="assets/profile.png" />
+
+  <!-- Structured Data: JSON-LD Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anant Shrey",
+    "url": "https://anantshrey.github.io",
+    "image": "assets/profile.png",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "DPSG Vasundhara"
+    },
+    "sameAs": [
+      "https://github.com/AnantShrey"
+    ],
+    "knowsAbout": ["Physics", "Computer Science", "Python", "Kinematics", "German"],
+    "subjectOf": {
+      "@type": "DigitalDocument",
+      "name": "Resume",
+      "url": "assets/resume.pdf"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Google Fonts: Cormorant Garamond (Serif), Plus Jakarta Sans (Sans), DM Mono (Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav id="navbar" class="nav-bar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/logo-light.png" alt="Anant Shrey" class="brand-logo brand-logo-dark" width="500" height="500"
+          decoding="async" />
+        <img src="assets/logo-dark.png" alt="Anant Shrey" class="brand-logo brand-logo-light" width="500" height="500"
+          decoding="async" />
+        <div class="brand-text">
+          <span class="brand-name">ANANT SHREY</span>
+          <span class="brand-sub">STUDENT / DEV</span>
+        </div>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#projects" class="nav-item">Work</a></li>
+          <li><a href="#credentials" class="nav-item">Log</a></li>
+          <li><a href="#skills" class="nav-item">Skills</a></li>
+          <li><a href="#contact" class="nav-item nav-contact-btn">Contact</a></li>
+        </ul>
+
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">
+          <i class="bx bx-sun" id="themeIcon"></i>
+        </button>
+
+        <button id="menuToggle" class="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link"><span class="nav-num">01</span> About</a></li>
+        <li><a href="#projects" class="mobile-nav-link"><span class="nav-num">02</span> Work</a></li>
+        <li><a href="#credentials" class="mobile-nav-link"><span class="nav-num">03</span> Log</a></li>
+        <li><a href="#skills" class="mobile-nav-link"><span class="nav-num">04</span> Skills</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span class="nav-num">05</span> Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <p class="mono-meta">NEW DELHI, INDIA · 2026</p>
+        <a href="assets/resume.pdf" target="_blank" class="mobile-resume-link">View Resume PDF ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+
+        <div class="hero-header-col reveal">
+          <div class="hero-tag-row">
+            <span class="meta-tag">HIGH SCHOOL SENIOR</span>
+            <span class="meta-separator">•</span>
+            <span class="meta-tag">PHYSICS & COMPUTING</span>
+            <span class="meta-separator">•</span>
+            <span class="meta-tag">GERMANY '27</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">ANANT</span>
+            <span class="title-line title-serif-italic">SHREY</span>
+          </h1>
+
+          <p class="hero-narrative">
+            A student developer learning the fundamental laws of physics and computing to build thoughtful experiments,
+            simulations, and systems.
+          </p>
+
+          <div class="hero-action-group">
+            <a href="#projects" class="btn-editorial primary">
+              Explore Work <span class="arrow">↓</span>
+            </a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-editorial secondary">
+              View Resume <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-col reveal">
+          <div class="portrait-wrapper">
+            <img src="assets/profile.png" alt="Anant Shrey portrait" class="portrait-img" />
+            <div class="portrait-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-text">DPSG Vasundhara · Grade 12</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-footer-bar">
+        <div class="container bar-inner">
+          <span class="mono-meta">FOCUS: KINEMATICS · COMPUTATIONAL PHYSICS · GERMAN B1</span>
+          <a href="#about" class="scroll-prompt" aria-label="Scroll to About section">
+            Scroll to explore <i class="bx bx-down-arrow-alt"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section-padding about-section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-num">01 / PROFILE</span>
+          <h2 class="section-display-heading">A quiet focus<br /><em>on learning.</em></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative-col reveal">
+            <!-- TODO: Confirm exact subject list (Physics, Chemistry, Mathematics, and Computer Science) -->
+            <p class="lead-text">
+              Hi, I’m Anant. I am currently in grade 12 at DPSG Vasundhara, studying Physics, Chemistry, Mathematics,
+              and Computer Science.
+            </p>
+            <p>
+              Instead of standard test preparation for engineering exams, I choose to invest my curiosity in learning
+              the fundamental rules of computing and physics — completing Harvard’s <span>CS50x course</span>, mastering
+              German, and writing Python code to model physical phenomena like projectile motion under air drag.
+            </p>
+            <p>
+              My ambition is to relocate to Germany in 2027 to pursue undergraduate studies in Physics and eventually
+              contribute to aerospace or scientific research.
+            </p>
+          </div>
+
+          <div class="about-stats-col reveal">
+            <h3 class="stats-col-title">ACADEMIC BENCHMARKS</h3>
+
+            <div class="editorial-stats-list">
+              <div class="stat-block">
+                <div class="stat-number">95<span class="stat-unit">%ile</span></div>
+                <div class="stat-details">
+                  <span class="stat-label">TestAS Core Module</span>
+                  <span class="stat-sub">Standardized Scholastic Aptitude</span>
+                </div>
+              </div>
+
+              <div class="stat-block">
+                <div class="stat-number">96<span class="stat-unit">%ile</span></div>
+                <div class="stat-details">
+                  <span class="stat-label">TestAS MCN Module</span>
+                  <span class="stat-sub">Math, CS &amp; Natural Sciences</span>
+                </div>
+              </div>
+
+              <div class="stat-block">
+                <div class="stat-number">95.2<span class="stat-unit">%</span></div>
+                <div class="stat-details">
+                  <span class="stat-label">CBSE Class 10 Boards</span>
+                  <span class="stat-sub">National Level Examination</span>
+                </div>
+              </div>
+
+              <div class="stat-block">
+                <div class="stat-number">97<span class="stat-unit">%</span></div>
+                <div class="stat-details">
+                  <span class="stat-label">CBSE Class 12 Boards</span>
+                  <span class="stat-sub">Target Aggregate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section-padding projects-section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-num">02 / SELECTED WORK</span>
+          <h2 class="section-display-heading">Selected Experiments<br /><em>&amp; Systems.</em></h2>
+        </div>
+
+        <div class="case-studies-list">
+
+          <!-- PROJECT 01 -->
+          <article class="case-study-item reveal">
+            <div class="case-study-grid">
+
+              <div class="case-study-meta">
+                <span class="case-index">01</span>
+                <h3 class="case-title">AeroLaunch</h3>
+                <span class="case-subtitle">Projectile Motion Optimizer</span>
+
+                <p class="case-description">
+                  A custom Python simulator mapping projectile trajectory arcs. Extends beyond simplified classroom
+                  formulas by accounting for air resistance, velocity-dependent drag coefficients, and launch angle
+                  optimization.
+                </p>
+
+                <div class="case-tech-list">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Matplotlib</span>
+                  <span class="tech-tag">Kinematics</span>
+                  <span class="tech-tag">Numerical Integration</span>
+                </div>
+
+                <div class="case-links">
+                  <a href="https://github.com/AnantShrey/AeroLaunch" target="_blank" rel="noopener noreferrer"
+                    class="link-editorial">
+                    View Code <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://anantshrey.github.io/AeroLaunch" target="_blank" rel="noopener noreferrer"
+                    class="link-editorial">
+                    Live Demo <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="case-study-visual">
+                <div class="visual-card physics-visual">
+                  <svg viewBox="0 0 400 240" class="svg-diagram" aria-hidden="true">
+                    <!-- Coordinate Axes -->
+                    <line x1="40" y1="200" x2="360" y2="200" class="axis-line" />
+                    <line x1="40" y1="200" x2="40" y2="40" class="axis-line" />
+
+                    <!-- Ideal Parabola (No Drag) -->
+                    <path d="M 40 200 Q 190 40 340 200" class="curve-ideal" />
+
+                    <!-- Real Trajectory (With Air Drag) -->
+                    <path d="M 40 200 C 130 70, 210 90, 270 200" class="curve-real" />
+
+                    <!-- Drag Vector Indicators -->
+                    <line x1="170" y1="108" x2="145" y2="125" class="vector-line" />
+                    <polygon points="145,125 152,120 150,128" class="vector-arrow" />
+                    <text x="125" y="140" class="svg-text-small">F_drag</text>
+
+                    <!-- Peak Altitude Markers -->
+                    <circle cx="170" cy="108" r="4" class="point-highlight" />
+                    <line x1="170" y1="108" x2="170" y2="200" class="dash-line" />
+
+                    <!-- Text Labels -->
+                    <text x="45" y="35" class="svg-text">y (Height)</text>
+                    <text x="320" y="190" class="svg-text">x (Range)</text>
+                    <text x="210" y="70" class="svg-label-ideal">Vacuum trajectory (45°)</text>
+                    <text x="140" y="95" class="svg-label-real">Air Resistance Model</text>
+                  </svg>
+
+                  <div class="visual-caption">
+                    <span class="caption-label">SIMULATION CANVAS</span>
+                    <span class="caption-value">Drag Coefficient (C_d = 0.47)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 02 -->
+          <article class="case-study-item case-study-reverse reveal">
+            <div class="case-study-grid">
+
+              <div class="case-study-meta">
+                <span class="case-index">02</span>
+                <h3 class="case-title">LifeOS</h3>
+                <span class="case-subtitle">Life &amp; Productivity Dashboard</span>
+
+                <p class="case-description">
+                  A web application built with TypeScript, Next.js, and Tailwind CSS. Allows tracking of daily
+                  activities, habit routines, and tasks within a single fluid dashboard interface. Integrates external
+                  APIs for personal book and cinema logs.
+                </p>
+
+                <div class="case-tech-list">
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">REST APIs</span>
+                </div>
+
+                <div class="case-links">
+                  <a href="https://github.com/AnantShrey/life-os" target="_blank" rel="noopener noreferrer"
+                    class="link-editorial">
+                    View Code <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://life-os-anantshrey.vercel.app" target="_blank" rel="noopener noreferrer"
+                    class="link-editorial">
+                    Live Demo <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="case-study-visual">
+                <div class="visual-card ui-visual">
+                  <div class="ui-mockup">
+                    <div class="mockup-header">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                      <span class="mockup-title">life-os.vercel.app</span>
+                    </div>
+                    <div class="mockup-body">
+                      <div class="mockup-sidebar">
+                        <div class="mockup-bar"></div>
+                        <div class="mockup-bar active"></div>
+                        <div class="mockup-bar"></div>
+                      </div>
+                      <div class="mockup-main">
+                        <div class="mockup-widget">
+                          <span class="widget-label">TODAY'S HABITS</span>
+                          <div class="widget-line long"></div>
+                          <div class="widget-line medium"></div>
+                        </div>
+                        <div class="mockup-grid-2">
+                          <div class="mockup-box">
+                            <span class="widget-label">PHYSICS LOG</span>
+                            <div class="widget-line short"></div>
+                          </div>
+                          <div class="mockup-box">
+                            <span class="widget-label">READING LIST</span>
+                            <div class="widget-line short"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="visual-caption">
+                    <span class="caption-label">SYSTEM ARCHITECTURE</span>
+                    <span class="caption-value">Single-Page Dashboard</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+          <article class="case-study-item reveal">
+            <div class="case-study-grid">
+
+              <div class="case-study-meta">
+                <span class="case-index">03</span>
+                <h3 class="case-title">German Dictionary</h3>
+                <span class="case-subtitle">Academic Vocabulary Logger</span>
+
+                <p class="case-description">
+                  An academic vocabulary logging and testing application created to support preparation for
+                  German-language undergraduate Physics studies. Includes structured database management for technical
+                  terms like <em>"Beschleunigung"</em> (acceleration).
+                </p>
+
+                <div class="case-tech-list">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">CLI / Database</span>
+                </div>
+
+                <div class="case-links">
+                  <a href="https://github.com/AnantShrey/German-Dictionary" target="_blank" rel="noopener noreferrer"
+                    class="link-editorial">
+                    View Code <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://anantshrey.github.io/german-dictionary" target="_blank" rel="noopener noreferrer"
+                    class="link-editorial">
+                    Live Demo <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="case-study-visual">
+                <div class="visual-card dict-visual">
+                  <div class="dict-editorial-card">
+                    <span class="dict-lang">DEUTSCH // PHYSIK</span>
+                    <h4 class="dict-word">Beschleunigung</h4>
+                    <p class="dict-phonetic">[bəˈʃlɔyniɡʊŋ] · noun, fem.</p>
+                    <div class="dict-divider"></div>
+                    <p class="dict-definition">
+                      Rate of change of velocity with respect to time (a = dv/dt).
+                    </p>
+                    <div class="dict-example">
+                      <em>"Die Erdbeschleunigung beträgt approximately 9,81 m/s²."</em>
+                    </div>
+                  </div>
+
+                  <div class="visual-caption">
+                    <span class="caption-label">PREPARATION LOG</span>
+                    <span class="caption-value">Studienkolleg / B1 Target</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CREDENTIALS LOG ================= -->
+    <section id="credentials" class="section-padding credentials-section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-num">03 / CHRONOLOGY</span>
+          <h2 class="section-display-heading">Credentials Log<br /><em>&amp; Milestones.</em></h2>
+        </div>
+
+        <div class="log-timeline-container">
+
+          <!-- STANDARDIZED TESTS -->
+          <div class="log-category-block reveal">
+            <h3 class="log-cat-heading">STANDARDIZED TESTS</h3>
+
+            <div class="log-entry">
+              <div class="log-year">2025</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  TestAS Examination <span class="log-badge">95% Core · 96% MCN</span>
+                </h4>
+                <p class="log-desc">
+                  Scored in the 95th Percentile for the Core Module and the 96th Percentile for the Mathematics, CS
+                  &amp; Natural Sciences (MCN) Module in the international standardized TestAS examination.
+                </p>
+              </div>
+            </div>
+
+            <div class="log-entry">
+              <div class="log-year">2025</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  CBSE Class 10 Boards <span class="log-badge">95.2% Aggregate</span>
+                </h4>
+                <p class="log-desc">
+                  National level board examinations. Awarded the School Scholar badge for academic excellence for 4
+                  consecutive years at DPSG Vasundhara for maintaining a 90%+ aggregate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXTRACURRICULAR LOG -->
+          <div class="log-category-block reveal">
+            <h3 class="log-cat-heading">EXTRACURRICULAR LOG</h3>
+
+            <div class="log-entry">
+              <div class="log-year">2026</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  Winner <span class="log-tag">// Cod Eclectic 2026</span>
+                </h4>
+                <p class="log-desc">
+                  Won Cod Eclectic 2026, a Python programming competition held as part of DPSG Vasundhara's Interzoid
+                  2026 inter-school fest.
+                </p>
+              </div>
+            </div>
+
+            <div class="log-entry">
+              <div class="log-year">2025</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  Winner <span class="log-tag">// Pyth-o-mania 2025</span>
+                </h4>
+                <p class="log-desc">
+                  Won Pyth-o-mania 2025, a Python programming competition held as part of DPSG International Confluence
+                  2025.
+                </p>
+              </div>
+            </div>
+
+            <div class="log-entry">
+              <div class="log-year">2025</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  IT Head <span class="log-tag">// DPSGVMUN 2nd Edition</span>
+                </h4>
+                <p class="log-desc">
+                  Managed smooth operation of the Audio-Visual presentations, alongside assisting with conference
+                  graphic design and video editing operations.
+                </p>
+              </div>
+            </div>
+
+            <div class="log-entry">
+              <div class="log-year">2023</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  Varsity Cricket <span class="log-tag">// DPSG</span>
+                </h4>
+                <p class="log-desc">
+                  Played on the school cricket squad, securing 3rd place in the DPSG Chairman's Cup championship.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COURSES & TRAINING -->
+          <div class="log-category-block reveal">
+            <h3 class="log-cat-heading">COURSES &amp; TRAINING</h3>
+
+            <div class="log-entry">
+              <div class="log-year log-ongoing">ONGOING</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  Harvard CS50x <span class="log-badge active-badge">In Progress</span>
+                </h4>
+                <p class="log-desc">
+                  Comprehensive training in computer science foundation principles: C syntax, algorithms, memory
+                  pointers, SQLite data structures, and network fundamentals.
+                </p>
+              </div>
+            </div>
+
+            <div class="log-entry">
+              <div class="log-year">2025</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  Under 30 National Rank <span class="log-tag">// AI Winter Camp for Students</span>
+                </h4>
+                <p class="log-desc">
+                  Specialized seminar organized by the Times of India group focusing on increasing productivity and
+                  efficiency by integrating AI and automated workflows.
+                </p>
+              </div>
+            </div>
+
+            <div class="log-entry">
+              <div class="log-year">2023</div>
+              <div class="log-content">
+                <h4 class="log-title">
+                  Scientific Research Bootcamp
+                </h4>
+                <p class="log-desc">
+                  Academic orientation on formal research methods, scientific writing, and experimental hypotheses
+                  sponsored by Shoolini University.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section-padding skills-section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-num">04 / INDEX</span>
+          <h2 class="section-display-heading">Technical Skills<br /><em>&amp; Domains.</em></h2>
+        </div>
+
+        <div class="skills-index-grid">
+
+          <div class="skill-index-card reveal">
+            <span class="index-code">01</span>
+            <h3 class="index-category">PROGRAMMING</h3>
+            <ul class="index-list">
+              <li><span class="bullet">—</span> Python</li>
+              <li><span class="bullet">—</span> C / C++</li>
+              <li><span class="bullet">—</span> SQL &amp; Database Management</li>
+              <li><span class="bullet">—</span> HTML5 / CSS3 &amp; Web Logic</li>
+              <li><span class="bullet">—</span> TypeScript (Dashboard Apps)</li>
+            </ul>
+          </div>
+
+          <div class="skill-index-card reveal">
+            <span class="index-code">02</span>
+            <h3 class="index-category">ACADEMICS</h3>
+            <ul class="index-list">
+              <li><span class="bullet">—</span> Physics</li>
+              <li><span class="bullet">—</span> Mathematics</li>
+              <!-- TODO: Confirm exact subject list for Chemistry -->
+              <li><span class="bullet">—</span> Chemistry</li>
+              <li><span class="bullet">—</span> Computer Science</li>
+              <li><span class="bullet">—</span> German Language (Level B1)</li>
+            </ul>
+          </div>
+
+          <div class="skill-index-card reveal">
+            <span class="index-code">03</span>
+            <h3 class="index-category">WORKFLOW</h3>
+            <ul class="index-list">
+              <li><span class="bullet">—</span> VS Code &amp; Development Tools</li>
+              <li><span class="bullet">—</span> Git &amp; GitHub Version Control</li>
+              <li><span class="bullet">—</span> Scientific Research Methods</li>
+              <li><span class="bullet">—</span> AI-Assisted Development</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section-padding contact-section">
+      <div class="container">
+
+        <div class="contact-card reveal">
+          <span class="section-num">05 / INQUIRIES</span>
+          <h2 class="contact-heading">LET'S TALK.</h2>
+
+          <p class="contact-subtext">
+            Whether it’s about physics simulations, programming, or undergraduate research in Germany — feel free to
+            drop an email.
+          </p>
+
+          <a href="mailto:anantshrey2009@gmail.com" class="contact-email-hero">
+            anantshrey2009@gmail.com <span class="email-arrow">→</span>
+          </a>
+
+          <div class="contact-link-row">
+            <a href="https://github.com/AnantShrey" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <i class="bx bxl-github"></i> GitHub ↗
+            </a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <i class="bx bx-file"></i> Resume PDF ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <span class="footer-brand">ANANT SHREY</span>
+        <p class="footer-meta">High school senior &amp; student developer.</p>
+      </div>
+
+      <div class="footer-center">
+        <span class="footer-status">● Preparing for Studienkolleg / Germany 2027</span>
+      </div>
+
+      <div class="footer-right">
+        <span class="footer-copyright">© 2026 Anant Shrey</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript Engine -->
+  <script src="script.js"></script>
+</body>
+
+</html>"viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Anant Shrey - Portfolio of a student and developer exploring the interface of physics and programming."
